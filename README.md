@@ -1,4 +1,4 @@
-# aitm-evilginx-server
+# Kaseya AiTM Workshop Reference Guide
 Building Evilginx Server with Kaseya Workshop
 
 
