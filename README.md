@@ -62,7 +62,7 @@ systemctl stop systemd-resolved
 
 ## Ready to become a hacker?
 
-```
+```bash
 # Time to configure your software
 config domain notm365.site
 
