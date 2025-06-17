@@ -64,13 +64,13 @@ systemctl stop systemd-resolved
 
 ```bash
 # Time to configure your software
-config domain notm365.site
+config domain <your domain>
 
 config ipv4 external <your public ip>
 
 # Now let's setup our phishlets
 
-phishlets hostname o365 notm365.site
+phishlets hostname o365 <your domain>
 
 phishlets enable o365
 
