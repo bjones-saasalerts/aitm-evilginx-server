@@ -11,43 +11,26 @@ ssh root@192.192.129.192
 whoami
 ```
 
-## Cloning GitHub Repositories
+## Downloading the Software and Cloning GitHub Repositories
 ```bash
-# Cloning the Evilginx 3 
-git clone https://github.com/bjones-saasalerts/evilginx3/
+# Download Evilginx 3
+wget https://github.com/bjones-saasalerts/evilginx3/releases/download/v3.3.0/evilginx-v3.3.0-linux-64bit.zip
 
 # Cloning the Evilginx 3 Phishlets
 git clone https://github.com/bjones-saasalerts/phishlets
 ```
 
-## Installing the correct version of Go
+## Extracting Evilginx and Making it Executable
 ```bash
-# Download version 1.19
-wget https://go.dev/dl/go1.19.linux-amd64.tar.gz
+# Install unzip
+apt install zip -y
 
-# Extract go into the correct folder
-tar -zxvf go1.19.linux-amd64.tar.gz -C /usr/local/
+# Extract the zip file
+unzip evilginx-v3.3.0-linux-64bit.zip
 
-# Adding the path for go to be able to execute
-echo "export PATH=/usr/local/go/bin:${PATH}" | sudo tee /etc/profile.d/go.sh
+# Make evilginx executable
+chmod +x evilginx
 
-# Making sure linux knows where to find go
-source /etc/profile.d/go.sh
-```
-
-## Time to make Evilginx Server
-```bash
-# Update your apt information
-apt update
-
-# Installing make
-apt install make -y
-
-#Change directory into the Evilginx folder
-cd evilginx3
-
-#Time to compile Evilginx
-make
 ```
 
 ## Time to run Evilginx3!
@@ -57,7 +40,7 @@ make
 systemctl stop systemd-resolved
 
 # Running Evilginx3 for the first time!
-/root/evilginx3/build/evilginx -p /root/phishlets/
+./evilginx -p /root/phishlets/
 ```
 
 ## Ready to become a hacker?
