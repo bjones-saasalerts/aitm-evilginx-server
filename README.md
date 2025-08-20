@@ -17,7 +17,7 @@ whoami
 wget https://github.com/bjones-saasalerts/evilginx3/releases/download/v3.3.0/evilginx-v3.3.0-linux-64bit.zip
 
 # Cloning the Evilginx 3 Phishlets
-git clone https://github.com/bjones-saasalerts/phishlets
+git clone https://github.com/bjones-saasalerts/phishlets realphishlets
 ```
 
 ## Extracting Evilginx and Making it Executable
@@ -40,7 +40,7 @@ chmod +x evilginx
 systemctl stop systemd-resolved
 
 # Running Evilginx3 for the first time!
-./evilginx -p /root/phishlets/
+./evilginx -p realphishlets
 ```
 
 ## Ready to become a hacker?
